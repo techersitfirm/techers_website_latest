@@ -1,0 +1,45 @@
+<?php
+
+namespace App\Middleware;
+
+use App\Core\Flash;
+use App\Services\PermissionService;
+
+class TeamAuthMiddleware
+{
+    public static function handle(?string $permission = null): void
+    {
+        if (empty($_SESSION['user_id'])) {
+
+            Flash::warning(
+                'Please login to continue.'
+            );
+
+            header(
+                'Location: ' .
+                BASE_URL .
+                '/auth/login'
+            );
+
+            exit;
+        }
+
+        if ($permission === null) {
+            return;
+        }
+
+        if (($_SESSION['user_type'] ?? '') === 'super-admin') {
+            return;
+        }
+
+        $permissionService = new PermissionService();
+
+        if (!$permissionService->userHas((int) $_SESSION['user_id'], $permission)) {
+            http_response_code(403);
+
+            echo '403 - Access Denied';
+
+            exit;
+        }
+    }
+}
