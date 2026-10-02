@@ -1,6 +1,6 @@
 <?php
 
-use App\Core\Router;
+use app\core\Router;
 
 Router::get(
     '/auth/login',

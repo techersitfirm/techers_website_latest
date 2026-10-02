@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Controllers\Admin;
+namespace app\controllers\Admin;
 
-use App\Core\Controller;
-use App\Middleware\AdminAuthMiddleware;
+use app\core\Controller;
+use app\middleware\AdminAuthMiddleware;
 
 class WorkPageController extends Controller
 {
@@ -95,7 +95,7 @@ class WorkPageController extends Controller
         }
 
         foreach ($permissions as $permission) {
-            if (\App\Core\Auth::can($permission)) {
+            if (\app\core\Auth::can($permission)) {
                 return;
             }
         }

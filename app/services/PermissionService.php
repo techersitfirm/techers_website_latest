@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Services;
+namespace app\services;
 
-use App\Core\Database;
+use app\core\Database;
 use PDO;
 
 class PermissionService

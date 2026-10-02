@@ -13,7 +13,7 @@ $baseUrl = BASE_URL;
         action="<?= $baseUrl ?>/admin/testimonials/update"
         enctype="multipart/form-data">
 
-        <?= \App\Helpers\Csrf::field() ?>
+        <?= \app\helpers\Csrf::field() ?>
 
         <input
             type="hidden"

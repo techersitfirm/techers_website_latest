@@ -7,7 +7,7 @@ if ($basePath !== '' && $basePath !== '/' && str_starts_with($currentPath, $base
     $currentPath = substr($currentPath, strlen($basePath)) ?: '/';
 }
 
-$can = static fn (string $permission): bool => \App\Core\Auth::can($permission);
+$can = static fn (string $permission): bool => \app\core\Auth::can($permission);
 
 $isActive = static function (array $paths) use ($currentPath): string {
     return in_array($currentPath, $paths, true) ? ' active' : '';

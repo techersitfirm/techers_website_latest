@@ -6,7 +6,7 @@
             Jobs List
         </h5>
 
-        <?php if (\App\Core\Auth::can('job.create')): ?>
+        <?php if (\app\core\Auth::can('job.create')): ?>
             <a
                 href="<?= $baseUrl ?>/admin/jobs/create"
                 class="btn btn-primary">
@@ -150,14 +150,14 @@
                                 <!-- Action -->
                                 <td>
 
-                                    <?php if (\App\Core\Auth::can('job.remove')): ?>
+                                    <?php if (\app\core\Auth::can('job.remove')): ?>
 
                                         <form
                                             method="POST"
                                             action="<?= BASE_URL ?>/admin/jobs/toggle-status"
                                             class="d-inline">
 
-                                            <?= \App\Helpers\Csrf::field() ?>
+                                            <?= \app\helpers\Csrf::field() ?>
 
                                             <input
                                                 type="hidden"
@@ -183,7 +183,7 @@
                                     <?php endif; ?>
 
 
-                                    <?php if (\App\Core\Auth::can('job.edit')): ?>
+                                    <?php if (\app\core\Auth::can('job.edit')): ?>
 
                                         <a
                                             href="<?= BASE_URL ?>/admin/jobs/edit?token=<?= htmlspecialchars($job['token'] ?? '') ?>"
@@ -197,7 +197,7 @@
                                     <?php endif; ?>
 
 
-                                    <?php if (\App\Core\Auth::can('job.delete')): ?>
+                                    <?php if (\app\core\Auth::can('job.delete')): ?>
 
                                         <form
                                             method="POST"
@@ -205,7 +205,7 @@
                                             class="d-inline"
                                             onsubmit="return confirm('Are you sure you want to delete this job?');">
 
-                                            <?= \App\Helpers\Csrf::field() ?>
+                                            <?= \app\helpers\Csrf::field() ?>
 
                                             <input
                                                 type="hidden"

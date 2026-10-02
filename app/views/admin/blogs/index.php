@@ -7,7 +7,7 @@
         Blog List
     </h5>
 
-    <?php if (\App\Core\Auth::can('blog.create')): ?>
+    <?php if (\app\core\Auth::can('blog.create')): ?>
         <a
             href="<?= $baseUrl ?>/admin/blogs/create"
             class="btn btn-primary">
@@ -147,14 +147,14 @@
                             <!-- Action -->
                             <td>
 
-                                <?php if (\App\Core\Auth::can('blog.remove')): ?>
+                                <?php if (\app\core\Auth::can('blog.remove')): ?>
 
                                     <form
                                         method="POST"
                                         action="<?= BASE_URL ?>/admin/blogs/toggle-status"
                                         class="d-inline">
 
-                                        <?= \App\Helpers\Csrf::field() ?>
+                                        <?= \app\helpers\Csrf::field() ?>
 
                                         <input
                                             type="hidden"
@@ -179,7 +179,7 @@
                                 <?php endif; ?>
 
 
-                                <?php if (\App\Core\Auth::can('blog.edit')): ?>
+                                <?php if (\app\core\Auth::can('blog.edit')): ?>
 
                                     <a
                                         href="<?= BASE_URL ?>/admin/blogs/edit?token=<?= htmlspecialchars($blog['token']) ?>"
@@ -193,7 +193,7 @@
                                 <?php endif; ?>
 
 
-                                <?php if (\App\Core\Auth::can('blog.delete')): ?>
+                                <?php if (\app\core\Auth::can('blog.delete')): ?>
 
                                     <form
                                         method="POST"
@@ -201,7 +201,7 @@
                                         class="d-inline"
                                         onsubmit="return confirm('Are you sure you want to delete this blog?');">
 
-                                        <?= \App\Helpers\Csrf::field() ?>
+                                        <?= \app\helpers\Csrf::field() ?>
 
                                         <input
                                             type="hidden"

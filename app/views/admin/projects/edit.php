@@ -24,7 +24,7 @@
             action="<?= $baseUrl ?>/admin/projects/update"
             enctype="multipart/form-data">
 
-            <?= \App\Helpers\Csrf::field() ?>
+            <?= \app\helpers\Csrf::field() ?>
 
             <input
                 type="hidden"

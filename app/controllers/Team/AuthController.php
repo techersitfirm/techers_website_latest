@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Controllers\Team;
+namespace app\controllers\Team;
 
-use App\Core\Controller;
-use App\Core\Flash;
+use app\core\Controller;
+use app\core\Flash;
 
 class AuthController extends Controller
 {
@@ -26,11 +26,11 @@ class AuthController extends Controller
 
     public function loginPost()
     {
-        (new \App\Controllers\Admin\AuthController())->loginPost();
+        (new \app\controllers\Admin\AuthController())->loginPost();
     }
 
     public function logout()
     {
-        (new \App\Controllers\Admin\AuthController())->logout();
+        (new \app\controllers\Admin\AuthController())->logout();
     }
 }

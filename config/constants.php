@@ -10,6 +10,6 @@ define('STORAGE_PATH', ROOT_PATH . '/storage');
 
 define('PUBLIC_PATH', ROOT_PATH . '/public');
 
-define('BASE_URL', 'http://localhost/techers/public');
+define('BASE_URL', 'http://localhost/techers_website_latest/public');
 
 define('APP_KEY', 'techers_2026_SECRET_KEY');

@@ -13,7 +13,7 @@ $baseUrl = BASE_URL;
         action="<?= $baseUrl ?>/admin/testimonials/store"
         enctype="multipart/form-data">
 
-        <?= \App\Helpers\Csrf::field() ?>
+        <?= \app\helpers\Csrf::field() ?>
 
         <div class="card-body">
 

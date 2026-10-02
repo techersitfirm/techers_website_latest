@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Controllers\Admin;
+namespace app\controllers\Admin;
 
-use App\Core\Controller;
-use App\Core\Auth;
-use App\Middleware\AdminAuthMiddleware;
-use App\Services\PermissionService;
+use app\core\Controller;
+use app\core\Auth;
+use app\middleware\AdminAuthMiddleware;
+use app\services\PermissionService;
 
 class DashboardController extends Controller
 {

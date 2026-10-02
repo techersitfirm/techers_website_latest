@@ -10,7 +10,7 @@
 
     <div class="card-body">
         <form method="post" action="<?= $baseUrl ?>/admin/users/access/add">
-            <?= \App\Helpers\Csrf::field() ?>
+            <?= \app\helpers\Csrf::field() ?>
             <input type="hidden" name="user_token" value="<?= htmlspecialchars($token) ?>">
 
             <div class="row align-items-end">

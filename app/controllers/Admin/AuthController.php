@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Controllers\Admin;
+namespace app\controllers\Admin;
 
-use App\Core\Controller;
-use App\Core\Flash;
-use App\Core\SessionManager;
-use App\Models\UserModel;
+use app\core\Controller;
+use app\core\Flash;
+use app\core\SessionManager;
+use app\models\UserModel;
 
 class AuthController extends Controller
 {

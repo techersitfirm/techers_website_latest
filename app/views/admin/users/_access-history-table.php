@@ -55,7 +55,7 @@
                             <td>
                                 <?php if ($record['access_type'] === 'revoked' && !$isRemoved && !$isExpired): ?>
                                     <form method="post" action="<?= $baseUrl ?>/admin/users/access/remove" class="d-inline">
-                                        <?= \App\Helpers\Csrf::field() ?>
+                                        <?= \app\helpers\Csrf::field() ?>
                                         <input type="hidden" name="user_token" value="<?= htmlspecialchars($token) ?>">
                                         <input type="hidden" name="record_id" value="<?= (int) $record['id'] ?>">
                                         <button type="submit" class="btn btn-sm btn-outline-primary" title="Restore default access">

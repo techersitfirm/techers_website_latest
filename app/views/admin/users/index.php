@@ -34,7 +34,7 @@
                             </td>
                             <td>
                                 <a
-                                    href="<?= $baseUrl ?>/admin/teams/edit?token=<?= htmlspecialchars(\App\Helpers\Crypto::encrypt((string) $user['id'])) ?>"
+                                    href="<?= $baseUrl ?>/admin/teams/edit?token=<?= htmlspecialchars(\app\helpers\Crypto::encrypt((string) $user['id'])) ?>"
                                     class="btn btn-sm btn-outline-secondary"
                                     title="Edit">
                                     <i class="bi bi-pencil-square"></i>

@@ -6,7 +6,7 @@
             Project List
         </h5>
 
-        <?php if (\App\Core\Auth::can('project.create')): ?>
+        <?php if (\app\core\Auth::can('project.create')): ?>
 
             <a
                 href="<?= $baseUrl ?>/admin/projects/create"
@@ -146,14 +146,14 @@
                                 <!-- Action -->
                                 <td>
 
-                                    <?php if (\App\Core\Auth::can('project.remove')): ?>
+                                    <?php if (\app\core\Auth::can('project.remove')): ?>
 
                                         <form
                                             method="POST"
                                             action="<?= BASE_URL ?>/admin/projects/toggle-status"
                                             class="d-inline">
 
-                                            <?= \App\Helpers\Csrf::field() ?>
+                                            <?= \app\helpers\Csrf::field() ?>
 
                                             <input
                                                 type="hidden"
@@ -179,7 +179,7 @@
                                     <?php endif; ?>
 
 
-                                    <?php if (\App\Core\Auth::can('project.edit')): ?>
+                                    <?php if (\app\core\Auth::can('project.edit')): ?>
 
                                         <a
                                             href="<?= BASE_URL ?>/admin/projects/edit?token=<?= htmlspecialchars($project['token']) ?>"
@@ -193,7 +193,7 @@
                                     <?php endif; ?>
 
 
-                                    <?php if (\App\Core\Auth::can('project.delete')): ?>
+                                    <?php if (\app\core\Auth::can('project.delete')): ?>
 
                                         <form
                                             method="POST"
@@ -201,7 +201,7 @@
                                             class="d-inline"
                                             onsubmit="return confirm('Are you sure you want to delete this project?');">
 
-                                            <?= \App\Helpers\Csrf::field() ?>
+                                            <?= \app\helpers\Csrf::field() ?>
 
                                             <input
                                                 type="hidden"

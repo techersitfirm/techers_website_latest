@@ -23,7 +23,7 @@
             enctype="multipart/form-data"
             id="jobForm">
 
-            <?= \App\Helpers\Csrf::field() ?>
+            <?= \app\helpers\Csrf::field() ?>
 
             <div class="row">
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Controllers\Team;
+namespace app\controllers\Team;
 
-use App\Core\Controller;
-use App\Middleware\TeamAuthMiddleware;
+use app\core\Controller;
+use app\middleware\TeamAuthMiddleware;
 
 class DashboardController extends Controller
 {

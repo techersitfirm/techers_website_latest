@@ -5,7 +5,7 @@
     id="blogForm"
     novalidate>
 
-    <?= \App\Helpers\Csrf::field() ?>
+    <?= \app\helpers\Csrf::field() ?>
 
     <input
         type="hidden"
@@ -221,7 +221,7 @@
 </form>
 
 
-<?php \App\Core\View::startSection('custom_js'); ?>
+<?php \app\core\View::startSection('custom_js'); ?>
 
 <script>
 
@@ -861,4 +861,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
 </script>
 
-<?php \App\Core\View::endSection(); ?>
+<?php \app\core\View::endSection(); ?>

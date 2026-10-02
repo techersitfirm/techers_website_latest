@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Controllers\Admin;
+namespace app\controllers\Admin;
 
-use App\Core\Controller;
-use App\Core\Flash;
-use App\Middleware\AdminAuthMiddleware;
-use App\Models\PermissionModel;
-use App\Models\UserTypeModel;
+use app\core\Controller;
+use app\core\Flash;
+use app\middleware\AdminAuthMiddleware;
+use app\models\PermissionModel;
+use app\models\UserTypeModel;
 
 class UserTypeController extends Controller
 {

@@ -1,6 +1,6 @@
 <?php
 
-use App\Core\View;
+use app\core\View;
 
 ?>
 <!DOCTYPE html>

@@ -6,7 +6,7 @@
             Team List
         </h5>
 
-        <?php if (\App\Core\Auth::can('team.create')): ?>
+        <?php if (\app\core\Auth::can('team.create')): ?>
             <a
                 href="<?= $baseUrl ?>/admin/teams/create"
                 class="btn btn-primary">
@@ -104,13 +104,13 @@
                             </td>
 
                             <td>
-                            <?php if (\App\Core\Auth::can('team.remove')): ?>
+                            <?php if (\app\core\Auth::can('team.remove')): ?>
                                 <form
                                     method="POST"
                                     action="<?= BASE_URL ?>/admin/teams/toggle-status"
                                     class="d-inline">
 
-                                    <?= \App\Helpers\Csrf::field() ?>
+                                    <?= \app\helpers\Csrf::field() ?>
 
                                     <input
                                         type="hidden"
@@ -133,7 +133,7 @@
                                 </form>
                             <?php endif; ?>
 
-                            <?php if (\App\Core\Auth::can('team.edit')): ?>
+                            <?php if (\app\core\Auth::can('team.edit')): ?>
                                 <a
                                     href="<?= BASE_URL ?>/admin/teams/edit?token=<?= htmlspecialchars($team['token']) ?>"
                                     class="btn btn-sm btn-outline-secondary"
@@ -142,7 +142,7 @@
                                 </a>
                             <?php endif; ?>
 
-                            <?php if (\App\Core\Auth::can('user.view')): ?>
+                            <?php if (\app\core\Auth::can('user.view')): ?>
                                 <a
                                     href="<?= BASE_URL ?>/admin/users/profile?id=<?= (int) $team['id'] ?>"
                                     class="btn btn-sm btn-outline-secondary"
@@ -151,7 +151,7 @@
                                 </a>
                             <?php endif; ?>
 
-                            <?php if (\App\Core\Auth::can('permission.assign')): ?>
+                            <?php if (\app\core\Auth::can('permission.assign')): ?>
                                 <a
                                     href="<?= BASE_URL ?>/admin/users/access?id=<?= (int) $team['id'] ?>"
                                     class="btn btn-sm btn-outline-primary"
