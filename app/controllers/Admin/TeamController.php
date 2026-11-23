@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Controllers\Admin;
+namespace app\controllers\Admin;
 
-use App\Core\Controller;
-use App\Core\Flash;
-use App\Helpers\Crypto;
-use App\Helpers\Csrf;
-use App\Helpers\FileUpload;
-use App\Helpers\Validator;
-use App\Middleware\AdminAuthMiddleware;
-use App\Models\UserModel;
-use App\Models\UserTypeModel;
+use app\core\Controller;
+use app\core\Flash;
+use app\helpers\Crypto;
+use app\helpers\Csrf;
+use app\helpers\FileUpload;
+use app\helpers\Validator;
+use app\middleware\AdminAuthMiddleware;
+use app\models\UserModel;
+use app\models\UserTypeModel;
 
 class TeamController extends Controller
 {

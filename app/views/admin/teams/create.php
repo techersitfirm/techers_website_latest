@@ -3,7 +3,7 @@
     action="<?= $baseUrl ?>/admin/teams/store"
     enctype="multipart/form-data"
     id="teamForm" novalidate>
-    <?= \App\Helpers\Csrf::field() ?>
+    <?= \app\helpers\Csrf::field() ?>
 
     <div class="card">
 
@@ -390,7 +390,7 @@
 
 </form>
 
-<?php \App\Core\View::startSection('custom_js'); ?>
+<?php \app\core\View::startSection('custom_js'); ?>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
@@ -1190,4 +1190,4 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
-<?php \App\Core\View::endSection(); ?>
+<?php \app\core\View::endSection(); ?>

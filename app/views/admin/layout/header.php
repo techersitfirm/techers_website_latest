@@ -180,7 +180,7 @@
 
     <!-- Page Specific CSS -->
 
-    <?= \App\Core\View::section('custom_css'); ?>
+    <?= \app\core\View::section('custom_css'); ?>
 
 </head>
 

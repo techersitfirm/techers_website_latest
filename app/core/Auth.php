@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Core;
+namespace app\core;
 
-use App\Services\PermissionService;
+use app\services\PermissionService;
 
 class Auth
 {

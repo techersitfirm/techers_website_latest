@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core;
+namespace app\Core;
 
 class Router
 {
@@ -45,7 +45,7 @@ class Router
 
         [$controller, $methodName] = explode('@', $action);
 
-        $controllerClass = "\\App\\Controllers\\" . $controller;
+        $controllerClass = "\\app\\controllers\\" . $controller;
 
         if (!class_exists($controllerClass)) {
             die("Controller not found: {$controllerClass}");

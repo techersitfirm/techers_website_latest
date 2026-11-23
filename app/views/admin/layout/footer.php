@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 
-<?= \App\Core\View::section('custom_js'); ?>
+<?= \app\core\View::section('custom_js'); ?>
 
 
 </body>

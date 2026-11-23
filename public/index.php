@@ -4,7 +4,7 @@ require '../config/constants.php';
 
 spl_autoload_register(function ($class) {
 
-    $prefix = 'App\\';
+    $prefix = 'app\\';
 
     if (strpos($class, $prefix) !== 0) {
         return;
@@ -21,8 +21,8 @@ spl_autoload_register(function ($class) {
     }
 });
 
-use App\Core\SessionManager;
-use App\Core\Router;
+use app\core\SessionManager;
+use app\core\Router;
 
 SessionManager::start();
 

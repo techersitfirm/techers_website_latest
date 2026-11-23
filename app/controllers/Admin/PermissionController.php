@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Controllers\Admin;
+namespace app\controllers\Admin;
 
-use App\Core\Controller;
-use App\Core\Flash;
-use App\Middleware\AdminAuthMiddleware;
-use App\Models\PermissionModel;
+use app\core\Controller;
+use app\core\Flash;
+use app\middleware\AdminAuthMiddleware;
+use app\models\PermissionModel;
 
 class PermissionController extends Controller
 {

@@ -39,7 +39,7 @@
                             <td>
                                 <?php if ($permission['access_type'] === 'addon'): ?>
                                     <form method="post" action="<?= $baseUrl ?>/admin/users/access/remove" class="d-inline">
-                                        <?= \App\Helpers\Csrf::field() ?>
+                                        <?= \app\helpers\Csrf::field() ?>
                                         <input type="hidden" name="user_token" value="<?= htmlspecialchars($token) ?>">
                                         <input type="hidden" name="record_id" value="<?= (int) $permission['record_id'] ?>">
                                         <button type="submit" class="btn btn-sm btn-outline-danger" title="Remove">
@@ -48,7 +48,7 @@
                                     </form>
 
                                     <form method="post" action="<?= $baseUrl ?>/admin/users/access/extend" class="d-inline-flex gap-1 mt-1">
-                                        <?= \App\Helpers\Csrf::field() ?>
+                                        <?= \app\helpers\Csrf::field() ?>
                                         <input type="hidden" name="user_token" value="<?= htmlspecialchars($token) ?>">
                                         <input type="hidden" name="record_id" value="<?= (int) $permission['record_id'] ?>">
                                         <input type="date" name="expires_at" class="form-control form-control-sm">
@@ -58,7 +58,7 @@
                                     </form>
                                 <?php else: ?>
                                     <form method="post" action="<?= $baseUrl ?>/admin/users/access/revoke" class="d-inline">
-                                        <?= \App\Helpers\Csrf::field() ?>
+                                        <?= \app\helpers\Csrf::field() ?>
                                         <input type="hidden" name="user_token" value="<?= htmlspecialchars($token) ?>">
                                         <input type="hidden" name="permission_id" value="<?= (int) $permission['id'] ?>">
                                         <button type="submit" class="btn btn-sm btn-outline-danger" title="Revoke access for this user">

@@ -8,7 +8,7 @@ $baseUrl = BASE_URL;
 
         <h5 class="mb-0">Testimonials</h5>
 
-        <?php if (\App\Core\Auth::can('testimonial.create')): ?>
+        <?php if (\app\core\Auth::can('testimonial.create')): ?>
 
             <a
                 href="<?= $baseUrl ?>/admin/testimonials/create"
@@ -119,7 +119,7 @@ $baseUrl = BASE_URL;
 
                                 <td>
 
-                                    <?php if (\App\Core\Auth::can('testimonial.edit')): ?>
+                                    <?php if (\app\core\Auth::can('testimonial.edit')): ?>
 
                                         <a
                                             href="<?= $baseUrl ?>/admin/testimonials/edit?token=<?= urlencode($testimonial['token']) ?>"
@@ -133,14 +133,14 @@ $baseUrl = BASE_URL;
                                     <?php endif; ?>
 
 
-                                    <?php if (\App\Core\Auth::can('testimonial.remove')): ?>
+                                    <?php if (\app\core\Auth::can('testimonial.remove')): ?>
 
                                         <form
                                             method="POST"
                                             action="<?= $baseUrl ?>/admin/testimonials/toggle-status"
                                             class="d-inline">
 
-                                            <?= \App\Helpers\Csrf::field() ?>
+                                            <?= \app\helpers\Csrf::field() ?>
 
                                             <input
                                                 type="hidden"
@@ -169,7 +169,7 @@ $baseUrl = BASE_URL;
                                     <?php endif; ?>
 
 
-                                    <?php if (\App\Core\Auth::can('testimonial.delete')): ?>
+                                    <?php if (\app\core\Auth::can('testimonial.delete')): ?>
 
                                         <form
                                             method="POST"
@@ -177,7 +177,7 @@ $baseUrl = BASE_URL;
                                             class="d-inline"
                                             onsubmit="return confirm('Are you sure you want to delete this testimonial?');">
 
-                                            <?= \App\Helpers\Csrf::field() ?>
+                                            <?= \app\helpers\Csrf::field() ?>
 
                                             <input
                                                 type="hidden"

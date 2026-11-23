@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Controllers\Admin;
+namespace app\controllers\Admin;
 
-use App\Core\Controller;
-use App\Core\Flash;
-use App\Helpers\Crypto;
-use App\Helpers\Csrf;
-use App\Middleware\AdminAuthMiddleware;
-use App\Models\JobsModel;
+use app\core\Controller;
+use app\core\Flash;
+use app\helpers\Crypto;
+use app\helpers\Csrf;
+use app\middleware\AdminAuthMiddleware;
+use app\models\JobsModel;
 
 class JobsController extends Controller
 {

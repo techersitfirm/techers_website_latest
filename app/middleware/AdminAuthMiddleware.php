@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Middleware;
+namespace app\middleware;
 
-use App\Core\Flash;
-use App\Services\PermissionService;
+use app\core\Flash;
+use app\services\PermissionService;
 
 class AdminAuthMiddleware
 {

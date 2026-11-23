@@ -24,7 +24,7 @@
             action="<?= $baseUrl ?>/admin/projects/store"
             enctype="multipart/form-data">
 
-            <?= \App\Helpers\Csrf::field() ?>
+            <?= \app\helpers\Csrf::field() ?>
 
             <div class="row">
 
